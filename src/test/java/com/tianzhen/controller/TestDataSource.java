@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.List;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class TestDataSource {
@@ -37,5 +39,11 @@ public class TestDataSource {
     @Test
     public void testSavePython(){
         bookInfoService.searchBookInfoAndSave("java");
+    }
+
+    @Test
+    public void test03(){
+        List<TBookInfo> tBookInfos = tBookInfoDao.selectNoUrlBook(30);
+        System.out.println(tBookInfos);
     }
 }

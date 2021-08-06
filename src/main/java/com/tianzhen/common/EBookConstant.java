@@ -23,7 +23,7 @@ public class EBookConstant {
     @Value("${yuedu.grant_type}")
     private String grantType;
 
-
-    
+    @Value("${yuedu.fetchDownloadUrl}")
+    private String fetchDownloadUrl;
 
 }

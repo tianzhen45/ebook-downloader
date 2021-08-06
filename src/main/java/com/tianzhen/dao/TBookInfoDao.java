@@ -3,6 +3,8 @@ package com.tianzhen.dao;
 import com.tianzhen.entity.TBookInfo;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface TBookInfoDao {
     int deleteByPrimaryKey(Integer id);
@@ -16,4 +18,6 @@ public interface TBookInfoDao {
     int updateByPrimaryKeySelective(TBookInfo record);
 
     int updateByPrimaryKey(TBookInfo record);
+
+    List<TBookInfo> selectNoUrlBook(int size);
 }
